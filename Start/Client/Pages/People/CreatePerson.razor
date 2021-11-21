@@ -1,0 +1,15 @@
+﻿@page "/person/create"
+@using Start.Shared.Entities
+
+
+<PersonForm Person="Person" OnValidSubmit="Create"/>
+
+@code {
+    Start.Shared.Entities.Person Person = new Person();
+    private void Create()
+    {
+        
+    }
+
+
+}

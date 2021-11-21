@@ -1,0 +1,22 @@
+﻿@page "/person/edit"
+@using Start.Shared.Entities
+@if (Person != null)
+{
+    <PersonForm Person="Person" OnValidSubmit="Edit"/>
+}
+
+@code {
+    [Parameter] public int PersonId{ get; set; }
+
+    Person Person;
+    protected override void OnInitialized()
+    {
+        Person = new Person() { Name = "AMit", DateOfBirth = DateTime.Today, Biography = "Something" };
+    }
+    private void Edit()
+    {
+        Console.WriteLine("Editing");
+    }
+
+
+}
